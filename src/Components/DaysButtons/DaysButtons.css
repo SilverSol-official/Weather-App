@@ -1,0 +1,13 @@
+.DaysButtons{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.weekButton, .tenDaysButton{
+    display: flex;
+    margin-right:20px;
+    box-shadow: 2px 5px 25px -3px #B4B4B440;
+    border-radius: 10px;
+    padding:auto;
+}

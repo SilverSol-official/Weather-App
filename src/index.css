@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.dark{
+  background: #4F4F4F;
+  color:white;
+  box-shadow: none;
+}
+
+/* .darkShadow{
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+} */
+
+.darkBG{
+  background-color: #0D1117;
+  box-shadow: none;
+}
+
+.css-1aquho2-MuiTabs-indicator{
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .header{
+    margin-bottom: 0px;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .logo>svg{
+    width:45px;
+  }
+  .search-input{
+    max-width: 100px;
+  }
+  .thisDay{
+    max-width: 100%;
+    margin:auto;
+    margin-top: 0px;
+  }
+  .thisDayMore{
+    max-width: 100%;
+    margin:auto;
+    margin-top: 10px;
+  }
+  .MainPageWrapper{
+    margin-top: 0px;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+.pcVariant{
+  display:none;
+}
+.mobileVariant{
+  display: block;
+  margin:auto;
+  width:100%;
+}
+.tenDayCard{
+  width:135px;
+}
+.tenDays{
+  width:100%;
+}
+.thisDay{
+  max-width: 100%;
+  margin:auto;
+  margin-top: 0px;
+}
+.thisDayMore{
+  max-width: 100%;
+  margin:auto;
+  margin-top: 10px;
+}
+}

@@ -1,0 +1,105 @@
+.tenDays{
+    display: flex;
+    
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    height: 280px;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    border-radius: 0px 0px 20px 20px;
+    justify-content: space-around;
+    padding:20px;
+}
+
+.tenDayCard{
+    font-family: 'Montserrat';
+    width: 95%;
+    height: 100%;
+    background: rgba(71, 147, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.pcVariant{
+    display: block;
+}
+.mobileVariant{
+    display:none;
+}
+
+.mobileVariant>.tenDayCard{
+    font-family: 'Montserrat';
+    width: 135px;
+    height: 100%;
+    background: rgba(71, 147, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.pcVariant>.tenDayCard{
+        font-family: 'Montserrat';
+        width: 95%;
+        height: 100%;
+        background: rgba(71, 147, 255, 0.2);
+        border-radius: 10px;
+        padding: 10px;
+}
+
+/* .weatherButton{
+    width: 11%;
+    height: 240px;
+} */
+
+.btnColor{
+    color: white;
+    border:none;
+}
+
+
+.tenDayWrapper{
+    margin-bottom: 13px;
+}
+
+.tenDayWrapper:last-child{
+    margin-top: 13px;
+}
+
+.dayLabel{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+}
+.dateLabel{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #939CB0;
+}
+.weatIcon>svg{
+    width:45px;
+    height:45px;
+
+}
+.maxTempLabel{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;}
+.minTempLabel{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #939CB0;
+}
+.weatCondLabel{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #939CB0;
+}
