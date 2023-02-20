@@ -1,22 +1,27 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import GlobalSVGSelector from "../../Assets/Icons/Global/globalSvgSelector";
+import StarIcon from '@mui/icons-material/Star';
+
+
 import './ThisDay.css';
+import { addCity, removeCity } from "../../rdx/Features/City/citySlice";
+
 
 const ThisDay = () => {
-
-
-
     const darkTheme = useSelector((state) => state.theme.darkTheme);
-    const weatherData = useSelector(state=>state.weather.weatherInfo);  
+    const weatherData = useSelector(state=>state.weather.weatherInfo); 
+    // const favouriteCities = useSelector(state => state.city.cities);
+    const dispatch = useDispatch();
+
     const date = new Date();
     const time = `${date.getHours()}:00`;
     const name = weatherData.name;
     const currTemp = +weatherData.main.temp;
     const icon = weatherData.weather[0].icon;
 
+    const [selected,setSelected] = useState(false);
 
-    
 
     let themeAddition = '';
 
@@ -24,15 +29,41 @@ const ThisDay = () => {
         themeAddition = 'dark';
     }
 
+    const setSelectBut = () => {
+        if (selected){
+            setSelected(false);
+            dispatch(removeCity({city:name}))
+        } else {
+            setSelected(true);
+            dispatch(addCity({city:name}));
+        }
+    }
+
+    const favButtonHandler = () => {
+        
+        if(selected){
+            return(<StarIcon style={{fill: "#E5E201"}}/>);
+        }else{
+            return(<StarIcon style={{fill: "gray"}}/>);
+        }
+    }
+// setSelectBut
+//                     ();
     return(
         <div className={`thisDay ${themeAddition}`}>
+            
             <div className="topBlock">
                 <div className="topBlockWrapper">
-                   <div className="currentTemp">{Math.round(currTemp)}°</div>
+                    <div className="currentTemp">{Math.round(currTemp)}°</div>
                     <div className={`currentDay ${themeAddition}`}>Today</div> 
                 </div>
-                 <GlobalSVGSelector id={icon}/>
-                {/* <img src= {`http://openweathermap.org/img/w/${icon}.png`} alt="weather icon" width="150px" /> */}
+                <GlobalSVGSelector id={icon}/>
+                <div className='favButton'>
+                    <button className={darkTheme?'setFavD':'setFavL'} onClick={()=>setSelectBut()}>
+                        {favButtonHandler()}
+                    </button>
+                       
+                </div>
             </div>
             <div className={`bottomBlock `}>
                 <div className={`thisTime ${themeAddition} `}>Time: <span>{time}</span></div>

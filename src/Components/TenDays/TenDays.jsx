@@ -119,6 +119,13 @@ const TenDays = ({number}) => {
         cardInfo[i].weatIcon=forecastData.forecastInfo.forecast.forecastday[i].day.condition.icon;
     }  
 
+    const tabThemeHandler = () => {
+        
+        if(darkTheme){
+            return({background: "#0D1117"});
+        }
+    }
+
     return(
         <>
         <div className='pcVariant'>
@@ -134,8 +141,8 @@ const TenDays = ({number}) => {
                 </Row>
             </Container>    
         </div>
-        <div className="mobileVariant">
-         <Box sx={{ maxWidth: { xs: '100%', sm: 1200 }, bgcolor: 'background.paper' }}>
+        <div className='mobileVariant '>
+         <Box sx={{ maxWidth: { xs: '100%', sm: 1200 } }}>
             <Tabs
                 value={value}
                 onChange={handleChange}
@@ -144,12 +151,13 @@ const TenDays = ({number}) => {
                 allowScrollButtonsMobile
                 aria-label="scrollable force tabs example"
                 className={`tenDays ${themeAdditionBg}`}
+                style={tabThemeHandler()}
             >
 
                 {/* <div className={`tenDays ${themeAdditionBg}`}> */}
                             {cardInfo.slice(0,number).map((item)=>{
                                     return(
-                                            <Tab label={<TenDaysCard item={item} key={item.id} />}></Tab>
+                                            <Tab  label={<TenDaysCard item={item} key={item.id} />}></Tab>
                                     )
                                 })}   
                     {/* </div>   */}

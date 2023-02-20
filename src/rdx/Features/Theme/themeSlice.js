@@ -14,6 +14,7 @@ export const themeSlicer = createSlice({
             }else{
                 state.darkTheme = false;
             }
+            console.log(state);
         }
     },
 });

@@ -37,3 +37,16 @@
     color: #000000;
     font-size: 25px;
   }
+
+.favButton{
+  margin-bottom: 145px;
+}
+
+.setFavD{
+  background: #4F4F4F;
+  border: none;
+}
+.setFavL{
+  background: white;
+  border: none;
+}

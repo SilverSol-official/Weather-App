@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router';
 import Header from './Components/Shared/Header/Header';
 import './App.css';
 import { useSelector } from 'react-redux';
+import FavCities from './Components/FavCities/favCities';
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
   return(
     <div className={`container ${themeAdditionBg}`}>
       <Header/>
+      <FavCities/>
       <Routes>
         <Route path='/:id/*'  element={<MainPage/>}/>
         <Route path='/registrationForm' exact element={<RegForm/>}/>

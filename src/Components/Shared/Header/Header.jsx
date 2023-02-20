@@ -31,7 +31,7 @@ const Header = () => {
                 <div className="logo">
                     <GlobalSVGSelector id="logo"/>
                 </div>
-                <div className="title"><Link to='/'>WEATHER</Link></div>
+                <div className="title"><Link style={{ textDecoration: 'none' }} to='/'>WEATHER</Link></div>
             </div>
             <div className={`wrapper ${themeAdditionBg}`}>
                 <div className="theme">
