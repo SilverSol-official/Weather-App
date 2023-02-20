@@ -6,7 +6,9 @@ import { Col, Container, Row } from "react-bootstrap";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import { v4 as uuidv4 } from 'uuid';
 import './TenDays.css';
+
 
 
 const TenDays = ({number}) => {
@@ -31,7 +33,7 @@ const TenDays = ({number}) => {
         weatIcon: 'sun',
         temp:['+18°','+15°'],
         weatCond:'sunny',
-        id:'0',
+        id:uuidv4(),
     },
     {
         day: 'Tomorow',
@@ -39,7 +41,7 @@ const TenDays = ({number}) => {
         weatIcon: 'sun',
         temp:['+18°','+15°'],
         weatCond:'sunny',
-        id:'1',
+        id:uuidv4(),
     },
     {
         day: 'today',
@@ -47,7 +49,7 @@ const TenDays = ({number}) => {
         weatIcon: 'sun',
         temp:['+18°','+15°'],
         weatCond:'sunny',
-        id:'2',
+        id:uuidv4(),
     },
     {
         day: 'today',
@@ -55,7 +57,7 @@ const TenDays = ({number}) => {
         weatIcon: 'sun',
         temp:['+18°','+15°'],
         weatCond:'sunny',
-        id:'3',
+        id:uuidv4(),
     },
     {
         day: 'today',
@@ -63,7 +65,7 @@ const TenDays = ({number}) => {
         weatIcon: 'sun',
         temp:['+18°','+15°'],
         weatCond:'sunny',
-        id:'4',
+        id:uuidv4(),
     },
     {
         day: 'today',
@@ -71,7 +73,7 @@ const TenDays = ({number}) => {
         weatIcon: 'sun',
         temp:['+18°','+15°'],
         weatCond:'sunny',
-        id:'5',
+        id:uuidv4(),
     },
     {
         day: 'today',
@@ -79,7 +81,7 @@ const TenDays = ({number}) => {
         weatIcon: 'sun',
         temp:['+18°','+15°'],
         weatCond:'sunny',
-        id:'6',
+        id:uuidv4(),
     },
     {
         day: 'today',
@@ -87,7 +89,7 @@ const TenDays = ({number}) => {
         weatIcon: 'sun',
         temp:['+18°','+15°'],
         weatCond:'sunny',
-        id:'7',
+        id:uuidv4(),
     },
     {
         day: 'today',
@@ -95,7 +97,7 @@ const TenDays = ({number}) => {
         weatIcon: 'sun',
         temp:['+18°','+15°'],
         weatCond:'sunny',
-        id:'8',
+        id:uuidv4(),
     },
     {
         day: 'today',
@@ -103,7 +105,7 @@ const TenDays = ({number}) => {
         weatIcon: 'sun',
         temp:['+18°','+15°'],
         weatCond:'sunny',
-        id:'9',
+        id: uuidv4(),
     },
 ]
 
