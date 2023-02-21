@@ -39,7 +39,8 @@
   }
 
 .favButton{
-  margin-bottom: 145px;
+  margin-bottom: -35px;
+  float: right;
 }
 
 .setFavD{

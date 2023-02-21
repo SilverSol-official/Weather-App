@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import GlobalSVGSelector from "../../Assets/Icons/Global/globalSvgSelector";
 import StarIcon from '@mui/icons-material/Star';
@@ -11,7 +11,7 @@ import { addCity, removeCity } from "../../rdx/Features/City/citySlice";
 const ThisDay = () => {
     const darkTheme = useSelector((state) => state.theme.darkTheme);
     const weatherData = useSelector(state=>state.weather.weatherInfo); 
-    // const favouriteCities = useSelector(state => state.city.cities);
+    const checklist = useSelector(state => state.city.cities);
     const dispatch = useDispatch();
 
     const date = new Date();
@@ -22,7 +22,13 @@ const ThisDay = () => {
 
     const [selected,setSelected] = useState(false);
 
-
+  useEffect(()=>{
+    if(checklist.includes(name)){
+            setSelected(true);
+        }else {setSelected(false)}
+        console.log('selected: ',selected);
+  },[name,checklist,selected])
+        
     let themeAddition = '';
 
     if (darkTheme){
@@ -51,19 +57,18 @@ const ThisDay = () => {
 //                     ();
     return(
         <div className={`thisDay ${themeAddition}`}>
-            
+            <div className='favButton'>
+                    <button className={darkTheme?'setFavD':'setFavL'} onClick={()=>setSelectBut()}>
+                        {favButtonHandler()}
+                    </button> 
+                </div>
             <div className="topBlock">
                 <div className="topBlockWrapper">
                     <div className="currentTemp">{Math.round(currTemp)}°</div>
                     <div className={`currentDay ${themeAddition}`}>Today</div> 
                 </div>
                 <GlobalSVGSelector id={icon}/>
-                <div className='favButton'>
-                    <button className={darkTheme?'setFavD':'setFavL'} onClick={()=>setSelectBut()}>
-                        {favButtonHandler()}
-                    </button>
-                       
-                </div>
+                
             </div>
             <div className={`bottomBlock `}>
                 <div className={`thisTime ${themeAddition} `}>Time: <span>{time}</span></div>

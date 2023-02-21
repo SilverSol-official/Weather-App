@@ -17,7 +17,6 @@ export const citySlicer = createSlice({
         removeCity: (state,action)=>{
             state.cities=[...state.cities.slice(0,state.cities.indexOf(action.payload.city)),...state.cities.slice((state.cities.indexOf(action.payload.city)+1))];
         },
-        
     },
 });
 

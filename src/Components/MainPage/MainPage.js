@@ -5,10 +5,11 @@ import DaysButtons from "../DaysButtons/DaysButtons";
 import ThisDay from "../ThisDay/thisDay";
 import ThisDayMore from "../ThisDayMore/ThisDayMore";
 import {Routes, Route, useParams} from 'react-router-dom';
-import './MainPage.css';
 import TenDays from "../TenDays/TenDays";
 import SpinnerButton from "../Spiners/SpinnerButton";
 import { Col, Container, Row } from "react-bootstrap";
+
+import './MainPage.css';
 
 const MainPage = () => {
     
