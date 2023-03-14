@@ -30,7 +30,7 @@ export const fetchForecast = createAsyncThunk(
         rejectWithValue
     }) {
         // const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=en&units=metric&APPID=b62d57689dbf49c6a96175709231403`;
-        const url = `http://api.weatherapi.com/v1/forecast.json?key=b62d57689dbf49c6a96175709231403&q=${city}&days=10&aqi=no&alerts=no`
+        const url = `https://api.weatherapi.com/v1/forecast.json?key=b62d57689dbf49c6a96175709231403&q=${city}&days=10&aqi=no&alerts=no`
         try {
             const responce = await fetch(url);
             if (!responce.ok) {
