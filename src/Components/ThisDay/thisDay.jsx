@@ -61,7 +61,7 @@ const ThisDay = () => {
                     <button className={darkTheme?'setFavD':'setFavL'} onClick={()=>setSelectBut()}>
                         {favButtonHandler()}
                     </button> 
-                </div>
+                </div>  
             <div className="topBlock">
                 <div className="topBlockWrapper">
                     <div className="currentTemp">{Math.round(currTemp)}°</div>

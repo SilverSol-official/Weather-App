@@ -1,0 +1,28 @@
+.modalWrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.modalThisDayMore{
+    position: relative;
+    padding: 40px;
+    max-width: 750px;
+    width: 100%;
+    border-radius: 20px;
+    background: #FFFFFF;
+}
+
+.modalThisDay{
+    position: relative;
+    padding: 40px;
+    max-width: 750px;
+    width: 100%;
+    border-radius: 20px;
+    background: #FFFFFF;
+}
+
+.currentTempPOP{
+    font-size: 40px;
+    font-weight: 500;
+    color: #4793FF;
+}

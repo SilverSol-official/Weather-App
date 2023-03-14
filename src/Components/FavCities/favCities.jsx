@@ -45,7 +45,7 @@ const FavCities = () => {
                                 {favList.map((item)=>{
                                     console.log(item)
                                         return(
-                                                <Tab key={uuidv4()} label={<Link to={`/${item}`} style={{ textDecoration: 'none' }}>{item}</Link>}></Tab>
+                                                <Tab key={uuidv4()} label={<Link to={`/cities/${item}`} style={{ textDecoration: 'none' }}>{item}</Link>}></Tab>
                                         )
                                     })}   
                         {/* </div>   */}

@@ -11,15 +11,15 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.container{
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 20px;
 }
 
-.dark{
+.dark {
   background: #4F4F4F;
-  color:white;
+  color: white;
   box-shadow: none;
 }
 
@@ -27,75 +27,106 @@ body {
   box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
 } */
 
-.darkBG{
+.darkBG {
   background-color: #0D1117;
   box-shadow: none;
 }
 
-.css-1aquho2-MuiTabs-indicator{
+.css-1aquho2-MuiTabs-indicator {
   display: none;
 }
 
-.favCities{
+.favCities {
   max-height: 50px;
   display: flex;
-  width:100%;
+  width: 100%;
 }
 
 
 
 @media screen and (max-width: 850px) {
-  .header{
+  .header {
     margin-bottom: 0px;
   }
-  .title{
+
+
+  .title {
     font-size: 20px;
   }
-  .logo>svg{
-    width:45px;
+
+  .logo>svg {
+    width: 45px;
+    display: none;
   }
-  .search-input{
-    max-width: 100px;
+
+  .theme {
+    margin: 0px;
   }
-  .thisDay{
+
+
+  .inputGroup {
+    flex-wrap: nowrap;
+  }
+
+  .favourite>input {
+    width: 150px;
+  }
+
+  .dropdown {
+    width: 75px;
+  }
+
+  .search-input {
+    max-width: 150px;
+    margin-left: 10px;
+  }
+
+  .thisDay {
     max-width: 100%;
-    margin:auto;
+    margin: auto;
     margin-top: 0px;
   }
-  .thisDayMore{
+
+  .thisDayMore {
     max-width: 100%;
-    margin:auto;
+    margin: auto;
     margin-top: 10px;
   }
-  .MainPageWrapper{
+
+  .MainPageWrapper {
     margin-top: 0px;
   }
 
 }
 
 @media screen and (max-width: 1000px) {
-.pcVariant{
-  display:none;
-}
-.mobileVariant{
-  display: block;
-  margin:auto;
-  width:100%;
-}
-.tenDayCard{
-  width:135px;
-}
-.tenDays{
-  width:100%;
-}
-.thisDay{
-  max-width: 100%;
-  margin:auto;
-  margin-top: 0px;
-}
-.thisDayMore{
-  max-width: 100%;
-  margin:auto;
-  margin-top: 10px;
-}
+  .pcVariant {
+    display: none;
+  }
+
+  .mobileVariant {
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+
+  .tenDayCard {
+    width: 135px;
+  }
+
+  .tenDays {
+    width: 100%;
+  }
+
+  .thisDay {
+    max-width: 100%;
+    margin: auto;
+    margin-top: 0px;
+  }
+
+  .thisDayMore {
+    max-width: 100%;
+    margin: auto;
+    margin-top: 10px;
+  }
 }
