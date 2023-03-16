@@ -3,7 +3,7 @@ import {
 } from "@reduxjs/toolkit";
 
 const initialState = {
-    cities: ['kharkiv'],
+    cities: ["Pavlohrad"],
 }
 
 
