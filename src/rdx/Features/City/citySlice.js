@@ -25,10 +25,10 @@ export const citySlicer = createSlice({
             localStorage.favCities = JSON.stringify(state.cities);
         },
         startCity: (state) => {
-            if (localStorage.favCities === "") {
-                localStorage.favCities = JSON.stringify(state.cities);
+            if (localStorage.getItem('favCities') !== null) {
+                state.cities = JSON.parse(localStorage.favCities);
             }
-            state.cities = JSON.parse(localStorage.favCities);
+
         }
     },
 });
