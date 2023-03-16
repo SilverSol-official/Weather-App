@@ -25,6 +25,9 @@ export const citySlicer = createSlice({
             localStorage.favCities = JSON.stringify(state.cities);
         },
         startCity: (state) => {
+            if (localStorage.favCities === "") {
+                localStorage.favCities = JSON.stringify(state.cities);
+            }
             state.cities = JSON.parse(localStorage.favCities);
         }
     },
