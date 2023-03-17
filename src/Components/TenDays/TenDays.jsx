@@ -6,7 +6,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import { v4 as uuidv4 } from "uuid";
+import cardInfo from "./CardInfoData";
 import "./TenDays.css";
 
 const TenDays = ({ number = 3 }) => {
@@ -23,89 +23,6 @@ const TenDays = ({ number = 3 }) => {
   if (darkTheme) {
     themeAdditionBg = "darkBg";
   }
-
-  let cardInfo = [
-    {
-      day: "Today",
-      date: "28 feb.",
-      weatIcon: "sun",
-      temp: ["+18°", "+15°"],
-      weatCond: "sunny",
-      id: uuidv4(),
-    },
-    {
-      day: "Tomorow",
-      date: "28 feb.",
-      weatIcon: "sun",
-      temp: ["+18°", "+15°"],
-      weatCond: "sunny",
-      id: uuidv4(),
-    },
-    {
-      day: "today",
-      date: "28 feb.",
-      weatIcon: "sun",
-      temp: ["+18°", "+15°"],
-      weatCond: "sunny",
-      id: uuidv4(),
-    },
-    {
-      day: "today",
-      date: "28 feb.",
-      weatIcon: "sun",
-      temp: ["+18°", "+15°"],
-      weatCond: "sunny",
-      id: uuidv4(),
-    },
-    {
-      day: "today",
-      date: "28 feb.",
-      weatIcon: "sun",
-      temp: ["+18°", "+15°"],
-      weatCond: "sunny",
-      id: uuidv4(),
-    },
-    {
-      day: "today",
-      date: "28 feb.",
-      weatIcon: "sun",
-      temp: ["+18°", "+15°"],
-      weatCond: "sunny",
-      id: uuidv4(),
-    },
-    {
-      day: "today",
-      date: "28 feb.",
-      weatIcon: "sun",
-      temp: ["+18°", "+15°"],
-      weatCond: "sunny",
-      id: uuidv4(),
-    },
-    {
-      day: "today",
-      date: "28 feb.",
-      weatIcon: "sun",
-      temp: ["+18°", "+15°"],
-      weatCond: "sunny",
-      id: uuidv4(),
-    },
-    {
-      day: "today",
-      date: "28 feb.",
-      weatIcon: "sun",
-      temp: ["+18°", "+15°"],
-      weatCond: "sunny",
-      id: uuidv4(),
-    },
-    {
-      day: "today",
-      date: "28 feb.",
-      weatIcon: "sun",
-      temp: ["+18°", "+15°"],
-      weatCond: "sunny",
-      id: uuidv4(),
-    },
-  ];
 
   for (let i = 0; i < 3; i++) {
     if (i > 1) {
@@ -160,7 +77,6 @@ const TenDays = ({ number = 3 }) => {
             className={`tenDays ${themeAdditionBg}`}
             style={tabThemeHandler()}
           >
-            {/* <div className={`tenDays ${themeAdditionBg}`}> */}
             {cardInfo.slice(0, number).map((item) => {
               return (
                 <Tab
@@ -169,7 +85,6 @@ const TenDays = ({ number = 3 }) => {
                 ></Tab>
               );
             })}
-            {/* </div>   */}
           </Tabs>
         </Box>
       </div>
