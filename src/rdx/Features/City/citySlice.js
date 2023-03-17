@@ -3,7 +3,7 @@ import {
 } from "@reduxjs/toolkit";
 
 const initialState = {
-    cities: [""],
+    cities: [],
 }
 
 
@@ -21,11 +21,9 @@ export const citySlicer = createSlice({
         removeCity: (state, action) => {
             state.cities = JSON.parse(localStorage.favCities);
             state.cities = [...state.cities.slice(0, state.cities.indexOf(action.payload.city)), ...state.cities.slice((state.cities.indexOf(action.payload.city) + 1))];
-            console.log(state.cities);
             localStorage.favCities = JSON.stringify(state.cities);
         },
         startCity: (state) => {
-            console.log('from state', state.cities)
             if (localStorage.getItem('favCities') !== null) {
                 state.cities = JSON.parse(localStorage.favCities);
             } else {
