@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { changeTheme } from "../../../rdx/Features/Theme/themeSlice";
+import {
+  changeTheme,
+  startTheme,
+} from "../../../rdx/Features/Theme/themeSlice";
 import { fetchWeather } from "../../../rdx/Features/Weather/weatherSlice";
 import Button from "react-bootstrap/Button";
 import GlobalSVGSelector from "../../../Assets/Icons/Global/globalSvgSelector";
@@ -23,6 +26,10 @@ const Header = () => {
     themeAdditionBg = "darkBG";
     color = "darkInput";
   }
+
+  useEffect(() => {
+    dispatch(startTheme());
+  }, [dispatch]);
 
   return (
     <div className={`header ${themeAdditionBg}`}>
